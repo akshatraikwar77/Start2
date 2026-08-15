@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FluxGroups - Premium Minecraft Hosting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">⚡ FLUX<span class="highlight">GROUPS</span></div>
+            <div class="nav-info">
+                <span class="ip">⚡ play.fluxsmp.fun</span>
+                <span class="divider">|</span>
+                Created by <span class="highlight">Akshat</span> &amp; <span class="highlight">Huzaifa</span>
+                <a href="https://discord.gg/4jM9mqvtnZ" class="discord-btn" target="_blank">💬 Discord</a>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('home')">🏠 Home</a></li>
+                <li><a onclick="showSection('smp')">👑 FLUX SMP</a></li>
+                <li><a onclick="showSection('hosting')">🖥️ FLUX HOSTING</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section class="section active" id="home">
+        <div class="hero">
+            <div class="hero-3d-bg">
+                <div class="server-cube-3d">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                    <div class="cube-glow"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">FLUX <span class="gradient-text">GROUPS</span></h1>
+                <p class="hero-subtitle">Premium Minecraft Hosting • Rank Store • Crate Keys • Shards</p>
+                <div class="hero-buttons">
+                    <button class="btn-main btn-smp" onclick="showSection('smp')">👑 FLUX SMP</button>
+                    <button class="btn-main btn-hosting" onclick="showSection('hosting')">🖥️ FLUX HOSTING</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUX SMP -->
+    <section class="section" id="smp">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Back to Home</button>
+            <h2 class="section-title">👑 FLUX SMP</h2>
+            <p class="section-subtitle">Ranks • Crate Keys • Shards</p>
+
+            <!-- RANKS -->
+            <h3 class="section-heading">👑 Ranks</h3>
+            <div class="plans-grid" id="ranks-grid"></div>
+
+            <!-- CRATE KEYS -->
+            <h3 class="section-heading">🗝️ Crate Keys</h3>
+            <div class="plans-grid" id="keys-grid"></div>
+
+            <!-- SHARDS -->
+            <h3 class="section-heading">💎 Shards</h3>
+            <div class="plans-grid" id="shards-grid"></div>
+
+            <!-- Quick Order -->
+            <div class="quick-order">
+                <h3>📦 Quick Order</h3>
+                <div class="order-form" id="smpOrderForm">
+                    <select id="smpProduct"></select>
+                    <input type="text" id="smpIgn" placeholder="Your Minecraft IGN" />
+                    <input type="text" id="smpDiscord" placeholder="Your Discord ID (e.g., @user)" />
+                    <button class="btn-primary" onclick="placeOrder('smp')">Place Order →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUX HOSTING -->
+    <section class="section" id="hosting">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Back to Home</button>
+            <h2 class="section-title">🖥️ FLUX HOSTING</h2>
+            <p class="section-subtitle">Choose your hosting plan</p>
+
+            <div class="hosting-nav">
+                <button class="active" data-hosting="budget">💰 Budget Friendly</button>
+                <button data-hosting="entry">🚀 Entry Level (AMD EPYC)</button>
+                <button data-hosting="premium">⭐ Premium (Ryzen 9 5900X)</button>
+                <button data-hosting="ryzen">🔥 Ryzen Powered (Ryzen 9 9950X)</button>
+            </div>
+
+            <div class="hosting-section active" id="hosting-budget">
+                <h3 class="section-heading">💰 Budget Friendly</h3>
+                <div class="plans-grid" id="budget-grid"></div>
+            </div>
+
+            <div class="hosting-section" id="hosting-entry">
+                <h3 class="section-heading">🚀 Entry Level (AMD EPYC)</h3>
+                <div class="plans-grid" id="entry-grid"></div>
+            </div>
+
+            <div class="hosting-section" id="hosting-premium">
+                <h3 class="section-heading">⭐ Premium (Ryzen 9 5900X)</h3>
+                <div class="plans-grid" id="premium-grid"></div>
+            </div>
+
+            <div class="hosting-section" id="hosting-ryzen">
+                <h3 class="section-heading">🔥 Ryzen Powered (Ryzen 9 9950X)</h3>
+                <div class="plans-grid" id="ryzen-grid"></div>
+            </div>
+
+            <div class="quick-order">
+                <h3>📦 Quick Order</h3>
+                <div class="order-form" id="hostingOrderForm">
+                    <select id="hostingProduct"></select>
+                    <input type="text" id="hostingIgn" placeholder="Your Minecraft IGN" />
+                    <input type="text" id="hostingDiscord" placeholder="Your Discord ID (e.g., @user)" />
+                    <button class="btn-primary" onclick="placeOrder('hosting')">Place Order →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>⚡ FluxSMP IP: <span class="ip">play.fluxsmp.fun</span></p>
+            <p>Created by <span class="highlight">Akshat</span> &amp; <span class="highlight">Huzaifa</span> ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+              </html>
