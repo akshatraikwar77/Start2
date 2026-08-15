@@ -242,7 +242,7 @@ function sendToDiscord(product, ign, discord) {
             body: JSON.stringify({ embeds: [embed] })
         }).catch(err => console.log('Webhook error:', err));
     } else {
-        console.log('🔴 Please set your Discord Webhook URL in the code!');
+        console.log('🔴 https://discord.com/api/webhooks/1538166590753869835/_KAwLf4WrKQDchjv6hyYLouvUuqoeP2W--vcew2wWd5rsPgi3DufdWsOCwi1UpZ4ZJCE');
         console.log('📨 Order details:', embed);
     }
 }
