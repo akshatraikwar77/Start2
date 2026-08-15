@@ -61,8 +61,9 @@ function renderPlans(data, containerId, type) {
         let featuresHTML = item.features.map(f => `<li>✅ ${f}</li>`).join('');
         let badgeHTML = item.badge ? `<div class="plan-badge">${item.badge}</div>` : '';
         let priceHTML = item.period ? `${item.price} <span>${item.period}</span>` : item.price;
+        let isFeatured = item.badge && (item.badge.includes('ULTIMATE') || item.badge.includes('BEST') || item.badge.includes('POPULAR'));
         return `
-            <div class="plan-card ${item.badge && item.badge.includes('ULTIMATE') || item.badge && item.badge.includes('BEST') ? 'featured' : ''}">
+            <div class="plan-card ${isFeatured ? 'featured' : ''}">
                 ${badgeHTML}
                 <div class="plan-icon">${item.icon}</div>
                 <h3>${item.name}</h3>
@@ -128,8 +129,22 @@ function showSection(section) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ===== HOSTING NAVIGATION =====
+// ===== TAB NAVIGATIONS =====
 document.addEventListener('DOMContentLoaded', function() {
+    // SMP Navigation
+    document.querySelectorAll('.smp-nav button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.smp-nav button').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('.smp-section').forEach(el => el.classList.remove('active'));
+
+            const target = this.getAttribute('data-smp');
+            document.getElementById('smp-' + target).classList.add('active');
+        });
+    });
+
+    // Hosting Navigation
     document.querySelectorAll('.hosting-nav button').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.hosting-nav button').forEach(b => b.classList.remove('active'));
