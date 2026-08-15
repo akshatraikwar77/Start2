@@ -69,14 +69,20 @@
             <!-- RANKS TAB -->
             <div class="smp-section active" id="smp-ranks">
                 <div class="model-3d-container">
-                    <div class="armor-stand-3d">
-                        <div class="armor-stand-body">
-                            <div class="head"><div class="helmet"></div><div class="face"></div></div>
-                            <div class="chest"><div class="chestplate"></div></div>
-                            <div class="legs"><div class="leggings"></div></div>
-                            <div class="boots"></div>
+                    <div class="armor-stand-2d">
+                        <div class="player-head"><div class="helmet"></div><div class="eyes"></div><div class="mouth"></div></div>
+                        <div class="player-body"><div class="chestplate"></div></div>
+                        <div class="player-arm-left"><div class="armor-arm"></div></div>
+                        <div class="player-arm-right"><div class="armor-arm"></div></div>
+                        <div class="player-legs">
+                            <div class="player-leg"><div class="leggings"></div><div class="boot"></div></div>
+                            <div class="player-leg"><div class="leggings"></div><div class="boot"></div></div>
                         </div>
-                        <div class="armor-glow"></div>
+                        <div class="armor-glow-2d"></div>
+                        <div class="sparkle s1"></div>
+                        <div class="sparkle s2"></div>
+                        <div class="sparkle s3"></div>
+                        <div class="sparkle s4"></div>
                     </div>
                     <p class="model-label">⚔️ FULLY MAXED ARMOR</p>
                 </div>
@@ -86,14 +92,15 @@
             <!-- CREATES TAB -->
             <div class="smp-section" id="smp-creates">
                 <div class="model-3d-container">
-                    <div class="shulker-3d">
-                        <div class="shulker-box">
-                            <div class="shulker-top"></div>
-                            <div class="shulker-body"></div>
-                            <div class="shulker-bottom"></div>
-                            <div class="shulker-eyes"></div>
-                        </div>
-                        <div class="shulker-glow"></div>
+                    <div class="shulker-2d">
+                        <div class="shulker-top"></div>
+                        <div class="shulker-body"></div>
+                        <div class="shulker-bottom"></div>
+                        <div class="shulker-eyes"></div>
+                        <div class="shulker-glow-2d"></div>
+                        <div class="shulker-sparkle s1"></div>
+                        <div class="shulker-sparkle s2"></div>
+                        <div class="shulker-sparkle s3"></div>
                     </div>
                     <p class="model-label">📦 SHULKER BOX</p>
                 </div>
@@ -103,16 +110,19 @@
             <!-- SHARDS TAB -->
             <div class="smp-section" id="smp-shards">
                 <div class="model-3d-container">
-                    <div class="amethyst-3d">
+                    <div class="amethyst-2d">
                         <div class="amethyst-crystal">
-                            <div class="crystal-point point-1"></div>
-                            <div class="crystal-point point-2"></div>
-                            <div class="crystal-point point-3"></div>
-                            <div class="crystal-point point-4"></div>
-                            <div class="crystal-point point-5"></div>
+                            <div class="crystal-point p1"></div>
+                            <div class="crystal-point p2"></div>
+                            <div class="crystal-point p3"></div>
+                            <div class="crystal-point p4"></div>
+                            <div class="crystal-point p5"></div>
                             <div class="crystal-base"></div>
                         </div>
-                        <div class="amethyst-glow"></div>
+                        <div class="amethyst-glow-2d"></div>
+                        <div class="amethyst-sparkle s1"></div>
+                        <div class="amethyst-sparkle s2"></div>
+                        <div class="amethyst-sparkle s3"></div>
                     </div>
                     <p class="model-label">💎 AMETHYST SHARD</p>
                 </div>
@@ -150,7 +160,7 @@
             <!-- BUDGET -->
             <div class="hosting-section active" id="hosting-budget">
                 <div class="model-3d-container-small">
-                    <div class="cpu-3d cpu-budget"><div class="cpu-chip"><div class="cpu-core"></div></div></div>
+                    <div class="cpu-2d cpu-budget"><div class="cpu-chip"><div class="cpu-core"></div><div class="cpu-label">BUDGET</div></div></div>
                     <p class="model-label-small">⚡ Budget CPU</p>
                 </div>
                 <div class="plans-grid" id="budget-grid"></div>
@@ -159,7 +169,7 @@
             <!-- ENTRY -->
             <div class="hosting-section" id="hosting-entry">
                 <div class="model-3d-container-small">
-                    <div class="cpu-3d cpu-epyc"><div class="cpu-chip"><div class="cpu-core epyc-core"></div><div class="cpu-text">EPYC</div></div></div>
+                    <div class="cpu-2d cpu-epyc"><div class="cpu-chip"><div class="cpu-core epyc-core"></div><div class="cpu-label">EPYC</div></div></div>
                     <p class="model-label-small">🚀 AMD EPYC</p>
                 </div>
                 <div class="plans-grid" id="entry-grid"></div>
@@ -168,7 +178,7 @@
             <!-- PREMIUM -->
             <div class="hosting-section" id="hosting-premium">
                 <div class="model-3d-container-small">
-                    <div class="cpu-3d cpu-ryzen9"><div class="cpu-chip"><div class="cpu-core ryzen-core"></div><div class="cpu-text">RYZEN 9</div></div></div>
+                    <div class="cpu-2d cpu-ryzen9"><div class="cpu-chip"><div class="cpu-core ryzen-core"></div><div class="cpu-label">RYZEN 9</div></div></div>
                     <p class="model-label-small">⭐ Ryzen 9 5900X</p>
                 </div>
                 <div class="plans-grid" id="premium-grid"></div>
@@ -177,7 +187,7 @@
             <!-- RYZEN POWERED -->
             <div class="hosting-section" id="hosting-ryzen">
                 <div class="model-3d-container-small">
-                    <div class="cpu-3d cpu-ryzen9-9950"><div class="cpu-chip"><div class="cpu-core ryzen-9950-core"></div><div class="cpu-text">RYZEN 9</div><div class="cpu-subtext">9950X</div></div></div>
+                    <div class="cpu-2d cpu-ryzen9950"><div class="cpu-chip"><div class="cpu-core ryzen-9950-core"></div><div class="cpu-label">RYZEN 9</div><div class="cpu-sublabel">9950X</div></div></div>
                     <p class="model-label-small">🔥 Ryzen 9 9950X</p>
                 </div>
                 <div class="plans-grid" id="ryzen-grid"></div>
@@ -206,4 +216,4 @@
 
     <script src="script.js"></script>
 </body>
-            </html>
+                    </html>
