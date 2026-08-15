@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-logo">⚡ FLUX<span class="highlight">GROUPS</span></div>
@@ -27,7 +27,7 @@
         </div>
     </nav>
 
-    <!-- HOME -->
+    <!-- ===== HOME ===== -->
     <section class="section active" id="home">
         <div class="hero">
             <div class="hero-3d-bg">
@@ -52,24 +52,72 @@
         </div>
     </section>
 
-    <!-- FLUX SMP -->
+    <!-- ===== FLUX SMP ===== -->
     <section class="section" id="smp">
         <div class="container">
             <button class="back-btn" onclick="showSection('home')">← Back to Home</button>
             <h2 class="section-title">👑 FLUX SMP</h2>
             <p class="section-subtitle">Ranks • Crate Keys • Shards</p>
 
-            <!-- RANKS -->
-            <h3 class="section-heading">👑 Ranks</h3>
-            <div class="plans-grid" id="ranks-grid"></div>
+            <!-- SMP Navigation -->
+            <div class="smp-nav">
+                <button class="active" data-smp="ranks">👑 Ranks</button>
+                <button data-smp="creates">📦 Creates</button>
+                <button data-smp="shards">💎 Shards</button>
+            </div>
 
-            <!-- CRATE KEYS -->
-            <h3 class="section-heading">🗝️ Crate Keys</h3>
-            <div class="plans-grid" id="keys-grid"></div>
+            <!-- RANKS TAB -->
+            <div class="smp-section active" id="smp-ranks">
+                <div class="model-3d-container">
+                    <div class="armor-stand-3d">
+                        <div class="armor-stand-body">
+                            <div class="head"><div class="helmet"></div><div class="face"></div></div>
+                            <div class="chest"><div class="chestplate"></div></div>
+                            <div class="legs"><div class="leggings"></div></div>
+                            <div class="boots"></div>
+                        </div>
+                        <div class="armor-glow"></div>
+                    </div>
+                    <p class="model-label">⚔️ FULLY MAXED ARMOR</p>
+                </div>
+                <div class="plans-grid" id="ranks-grid"></div>
+            </div>
 
-            <!-- SHARDS -->
-            <h3 class="section-heading">💎 Shards</h3>
-            <div class="plans-grid" id="shards-grid"></div>
+            <!-- CREATES TAB -->
+            <div class="smp-section" id="smp-creates">
+                <div class="model-3d-container">
+                    <div class="shulker-3d">
+                        <div class="shulker-box">
+                            <div class="shulker-top"></div>
+                            <div class="shulker-body"></div>
+                            <div class="shulker-bottom"></div>
+                            <div class="shulker-eyes"></div>
+                        </div>
+                        <div class="shulker-glow"></div>
+                    </div>
+                    <p class="model-label">📦 SHULKER BOX</p>
+                </div>
+                <div class="plans-grid" id="keys-grid"></div>
+            </div>
+
+            <!-- SHARDS TAB -->
+            <div class="smp-section" id="smp-shards">
+                <div class="model-3d-container">
+                    <div class="amethyst-3d">
+                        <div class="amethyst-crystal">
+                            <div class="crystal-point point-1"></div>
+                            <div class="crystal-point point-2"></div>
+                            <div class="crystal-point point-3"></div>
+                            <div class="crystal-point point-4"></div>
+                            <div class="crystal-point point-5"></div>
+                            <div class="crystal-base"></div>
+                        </div>
+                        <div class="amethyst-glow"></div>
+                    </div>
+                    <p class="model-label">💎 AMETHYST SHARD</p>
+                </div>
+                <div class="plans-grid" id="shards-grid"></div>
+            </div>
 
             <!-- Quick Order -->
             <div class="quick-order">
@@ -84,40 +132,58 @@
         </div>
     </section>
 
-    <!-- FLUX HOSTING -->
+    <!-- ===== FLUX HOSTING ===== -->
     <section class="section" id="hosting">
         <div class="container">
             <button class="back-btn" onclick="showSection('home')">← Back to Home</button>
             <h2 class="section-title">🖥️ FLUX HOSTING</h2>
             <p class="section-subtitle">Choose your hosting plan</p>
 
+            <!-- Hosting Navigation -->
             <div class="hosting-nav">
                 <button class="active" data-hosting="budget">💰 Budget Friendly</button>
-                <button data-hosting="entry">🚀 Entry Level (AMD EPYC)</button>
+                <button data-hosting="entry">🚀 Entry (AMD EPYC)</button>
                 <button data-hosting="premium">⭐ Premium (Ryzen 9 5900X)</button>
-                <button data-hosting="ryzen">🔥 Ryzen Powered (Ryzen 9 9950X)</button>
+                <button data-hosting="ryzen">🔥 Ryzen (Ryzen 9 9950X)</button>
             </div>
 
+            <!-- BUDGET -->
             <div class="hosting-section active" id="hosting-budget">
-                <h3 class="section-heading">💰 Budget Friendly</h3>
+                <div class="model-3d-container-small">
+                    <div class="cpu-3d cpu-budget"><div class="cpu-chip"><div class="cpu-core"></div></div></div>
+                    <p class="model-label-small">⚡ Budget CPU</p>
+                </div>
                 <div class="plans-grid" id="budget-grid"></div>
             </div>
 
+            <!-- ENTRY -->
             <div class="hosting-section" id="hosting-entry">
-                <h3 class="section-heading">🚀 Entry Level (AMD EPYC)</h3>
+                <div class="model-3d-container-small">
+                    <div class="cpu-3d cpu-epyc"><div class="cpu-chip"><div class="cpu-core epyc-core"></div><div class="cpu-text">EPYC</div></div></div>
+                    <p class="model-label-small">🚀 AMD EPYC</p>
+                </div>
                 <div class="plans-grid" id="entry-grid"></div>
             </div>
 
+            <!-- PREMIUM -->
             <div class="hosting-section" id="hosting-premium">
-                <h3 class="section-heading">⭐ Premium (Ryzen 9 5900X)</h3>
+                <div class="model-3d-container-small">
+                    <div class="cpu-3d cpu-ryzen9"><div class="cpu-chip"><div class="cpu-core ryzen-core"></div><div class="cpu-text">RYZEN 9</div></div></div>
+                    <p class="model-label-small">⭐ Ryzen 9 5900X</p>
+                </div>
                 <div class="plans-grid" id="premium-grid"></div>
             </div>
 
+            <!-- RYZEN POWERED -->
             <div class="hosting-section" id="hosting-ryzen">
-                <h3 class="section-heading">🔥 Ryzen Powered (Ryzen 9 9950X)</h3>
+                <div class="model-3d-container-small">
+                    <div class="cpu-3d cpu-ryzen9-9950"><div class="cpu-chip"><div class="cpu-core ryzen-9950-core"></div><div class="cpu-text">RYZEN 9</div><div class="cpu-subtext">9950X</div></div></div>
+                    <p class="model-label-small">🔥 Ryzen 9 9950X</p>
+                </div>
                 <div class="plans-grid" id="ryzen-grid"></div>
             </div>
 
+            <!-- Quick Order -->
             <div class="quick-order">
                 <h3>📦 Quick Order</h3>
                 <div class="order-form" id="hostingOrderForm">
@@ -130,7 +196,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <p>⚡ FluxSMP IP: <span class="ip">play.fluxsmp.fun</span></p>
@@ -140,4 +206,4 @@
 
     <script src="script.js"></script>
 </body>
-              </html>
+            </html>
