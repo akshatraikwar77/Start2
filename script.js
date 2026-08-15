@@ -1,4 +1,5 @@
-   // ===== DATA =====
+<script>
+    // ===== DATA =====
     const ranks = [
         { name: 'VIP', price: '₹99', period: '/month', icon: '👑', badge: 'Popular', features: ['Basic Permissions', '/fly Access', '1 Home Set', 'Chat Color'] },
         { name: 'VIP+', price: '₹249', period: '/month', icon: '⚡', badge: '⭐ Best Value', features: ['All VIP Features', '3 Home Sets', '/nick Command', 'Priority Queue'] },
